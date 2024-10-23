@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.search-container input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container button:hover {
+    background: #1003d1;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sobre-loja {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.coluna-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.coluna-texto {
+    max-width: 50%;
+}
+
+.produtos {
+    padding: 20px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: calc(25% - 20px);
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.preco {
+    font-size: 1.2em;
+    color: #28a745;
+    margin: 10px 0;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .produto {
+        width: calc(50% - 20px);
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .produto {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-sobre-loja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna-imagem, .coluna-texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .produto {
+        width: calc(100% - 20px);
+    }
+
+    .lista-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container {
+        position: static;
+        margin: 10px 0;
+    }
+}
